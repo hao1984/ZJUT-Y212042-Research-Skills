@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Penguin Morphospace Reversal Boundary</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="workspace">
+      <header class="topbar">
+        <div>
+          <p class="kicker">Palmer Penguins Morphology, 2007-2009</p>
+          <h1>Ecological scaling reversal boundary</h1>
+        </div>
+        <div class="claim-strip" id="claimStrip">
+          <button class="trace-button is-active" data-trace="pooled">pooled r -0.5839</button>
+          <button class="trace-button" data-trace="Adelie">Adelie +</button>
+          <button class="trace-button" data-trace="Chinstrap">Chinstrap +</button>
+          <button class="trace-button" data-trace="Gentoo">Gentoo +</button>
+        </div>
+      </header>
+
+      <section class="stage-shell">
+        <div class="stage-toolbar" aria-label="Morphospace layers">
+          <label><input type="checkbox" data-layer="lens" checked /> boundary lens</label>
+          <label><input type="checkbox" data-layer="tethers" checked /> tethers</label>
+          <label><input type="checkbox" data-layer="sex" checked /> sex vectors</label>
+          <label><input type="checkbox" data-layer="island" checked /> island marks</label>
+          <label><input type="checkbox" data-layer="year" checked /> year ticks</label>
+          <label><input type="checkbox" data-layer="singular" checked /> singular anchors</label>
+        </div>
+
+        <svg id="morphospace" role="img" aria-label="PCA morphospace with reversal vectors, boundary tethers, sex vectors, island constraints, and singular anchors"></svg>
+
+        <aside class="inspector" id="inspector">
+          <div class="inspector-section">
+            <p class="eyebrow">selected record</p>
+            <h2 id="selectedTitle">Boundary field</h2>
+            <p id="selectedMeta">Move through the Adelie-Chinstrap band or click a point to inspect the real measured row.</p>
+          </div>
+          <div class="measure-grid" id="measureGrid"></div>
+          <div class="inspector-section">
+            <p class="eyebrow">active evidence</p>
+            <p id="activeEvidence">The pooled flipper-depth vector points opposite to all three within-species scaling vectors.</p>
+          </div>
+          <div class="legend" id="legend"></div>
+        </aside>
+
+        <button class="data-tab" id="dataTab" aria-expanded="false">data provenance</button>
+        <footer class="provenance" id="provenance"></footer>
+      </section>
+    </main>
+
+    <script src="./data/prepared.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

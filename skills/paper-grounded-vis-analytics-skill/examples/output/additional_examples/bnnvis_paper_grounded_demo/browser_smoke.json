@@ -1,0 +1,53 @@
+{
+  "checked_at": "2026-06-03T16:38:54.335Z",
+  "url": "file:///C:/Users/Maxh/Desktop/VisPaper/runs/paper_grounded_skill_tests/bnnvis/app/index.html",
+  "pass": true,
+  "results": [
+    {
+      "viewport": "1920x1080",
+      "consoleErrors": [],
+      "metrics": {
+        "viewportWidth": 1920,
+        "viewportHeight": 1080,
+        "bodyScrollHeight": 1080,
+        "htmlScrollHeight": 1080,
+        "bodyScrollWidth": 1920,
+        "htmlScrollWidth": 1920,
+        "svgCount": 1,
+        "dataMarks": 18,
+        "referenceRows": 6,
+        "keywordPills": 18,
+        "visibleRequired": true
+      },
+      "verticalOverflow": 0,
+      "horizontalOverflow": 0,
+      "viewportFit": true,
+      "nonblank": true,
+      "coordinatedWorkspaceVisible": true,
+      "screenshot": "C:\\Users\\Maxh\\Desktop\\VisPaper\\runs\\paper_grounded_skill_tests\\bnnvis\\artifacts\\smoke_1920x1080.png"
+    },
+    {
+      "viewport": "1440x810",
+      "consoleErrors": [],
+      "metrics": {
+        "viewportWidth": 1440,
+        "viewportHeight": 810,
+        "bodyScrollHeight": 810,
+        "htmlScrollHeight": 810,
+        "bodyScrollWidth": 1440,
+        "htmlScrollWidth": 1440,
+        "svgCount": 1,
+        "dataMarks": 18,
+        "referenceRows": 6,
+        "keywordPills": 18,
+        "visibleRequired": true
+      },
+      "verticalOverflow": 0,
+      "horizontalOverflow": 0,
+      "viewportFit": true,
+      "nonblank": true,
+      "coordinatedWorkspaceVisible": true,
+      "screenshot": "C:\\Users\\Maxh\\Desktop\\VisPaper\\runs\\paper_grounded_skill_tests\\bnnvis\\artifacts\\smoke_1440x810.png"
+    }
+  ]
+}

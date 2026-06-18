@@ -1,0 +1,123 @@
+{
+  "overall_visual_craft_score": 4,
+  "screenshot_quality_gate": {
+    "passes": true,
+    "primary_object_readable": true,
+    "visual_hierarchy_clear": true,
+    "not_dashboard_or_poster": true,
+    "no_major_overlap_or_clipping": true,
+    "detail_panel_supports_analysis": true,
+    "screenshots_checked": [
+      "artifacts/qa/desktop_1920.png",
+      "artifacts/qa/desktop_1440.png"
+    ]
+  },
+  "browser_smoke": {
+    "url_checked": "http://127.0.0.1:8899/",
+    "viewports": [
+      "1920x1080",
+      "1440x810"
+    ],
+    "console_errors": [],
+    "page_errors": [],
+    "primary_marks_detected": {
+      "corridor_ribbons": 32,
+      "anomaly_sparks": 31,
+      "phase_hour_bars": 48,
+      "record_trace_rows": 7
+    },
+    "provenance_visible": true
+  },
+  "layer_budget": {
+    "default_primary_layers": 3,
+    "default_layers": [
+      "region and airport anchors",
+      "valid-trip tapered corridor ribbons",
+      "anomaly shadow sparks"
+    ],
+    "excessive_default_overlays": false,
+    "progressive_reveal_used": true
+  },
+  "label_policy": {
+    "global_annotation_count": 8,
+    "global_labels": [
+      "Manhattan",
+      "Brooklyn",
+      "Queens",
+      "Bronx",
+      "Staten Island",
+      "JFK",
+      "LGA",
+      "EWR"
+    ],
+    "occlusion_risk": "low",
+    "label_priority_explained": "Only borough and airport anchors receive persistent labels. Unknown or unresolved lookup buckets remain unlabeled in the default braid and are explained through trace context when selected."
+  },
+  "style_discipline": {
+    "decorative_effects_used": [
+      "subtle workspace grid",
+      "airport gateway membrane arcs"
+    ],
+    "decorative_effects_without_data_meaning": [],
+    "plain_neutral_background_considered": true,
+    "palette_check": "Neutral charcoal background with role-coded teal, amber, orange, violet, and magenta data marks; not a one-hue dashboard palette."
+  },
+  "detail_panel_policy": {
+    "uses_kpi_grid_as_primary": false,
+    "evidence_trace_present": true,
+    "evidence_panel_role": "Explains the selected OD-time strand through regime baselines, selected corridor medians, top measured zone strands, anomaly class counts, and capped real-row traces."
+  },
+  "coordinated_workspace_gate": {
+    "view_count": 4,
+    "views": [
+      "primary_structure_view",
+      "temporal_phase_view",
+      "regime_evidence_view",
+      "record_trace_view"
+    ],
+    "linked_interaction_count": 4,
+    "has_shared_state": true,
+    "buttons_only_interaction": false,
+    "passes": true
+  },
+  "checks": {
+    "single_data_specific_primary_object": true,
+    "first_screen_is_workspace_not_landing_page": true,
+    "not_dashboard_or_card_grid": true,
+    "not_chart_collage": true,
+    "data_provenance_visible": true,
+    "real_data_no_synthetic": true,
+    "tip_payment_conditioning_visible": true,
+    "airport_role_state_visible": true,
+    "anomaly_trace_visible": true
+  },
+  "issues_found": [
+    {
+      "issue": "Initial browser run failed because the measured lookup bucket 'Unknown' had no schematic anchor.",
+      "severity": "blocking",
+      "resolved": true
+    },
+    {
+      "issue": "Right evidence/trace pane was cramped at 1440x810.",
+      "severity": "medium",
+      "resolved": true
+    },
+    {
+      "issue": "The Unknown anchor label pushed global labels beyond the design budget.",
+      "severity": "medium",
+      "resolved": true
+    },
+    {
+      "issue": "Transparent corridor hit paths could intercept each other.",
+      "severity": "medium",
+      "resolved": true
+    }
+  ],
+  "fixes_applied": [
+    "Serialized missing credit-tip quantiles as JSON null rather than invalid NaN.",
+    "Added an explicit measured Unknown-region anchor while keeping it unlabeled by default.",
+    "Reallocated right-pane height and compacted the regime evidence SVG for 1440x810 readability.",
+    "Removed oversized transparent corridor hit paths so visible ribbons and anomaly sparks handle interaction directly.",
+    "Re-ran browser screenshots at 1920x1080 and 1440x810 with no console or page errors."
+  ]
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Dataset Paper-Grounded VIS Analytics"
+  short_description: "Orchestrate real-data VIS system roles"
+  default_prompt: "Use $dataset-paper-grounded-vis-analytics to run the full Mechanism-E role pipeline: load and profile my real dataset, mine data-specific patterns, retrieve related VIS papers from the local paper corpus, synthesize an idea contract, then design, build, critique, repair, and deliver a runnable coordinated multi-view visual analytics frontend."

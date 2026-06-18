@@ -1,0 +1,4 @@
+interface:
+  display_name: "Paper Grounded VIS System Design"
+  short_description: "Build paper-grounded VIS frontend demos"
+  default_prompt: "Use $paper-grounded-vis-system-design to retrieve related VIS papers, create a Mechanism-E design contract, and output a runnable coordinated visual analytics frontend demo for this dataset or paper."

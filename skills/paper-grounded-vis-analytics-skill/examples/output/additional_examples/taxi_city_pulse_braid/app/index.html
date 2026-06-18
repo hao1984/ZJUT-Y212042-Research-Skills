@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>January Taxi Pulse Braid</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>January Taxi Pulse Braid</h1>
+          <p>Brush time, select a corridor, and inspect where commute reversal turns into airport gateway behavior.</p>
+        </div>
+        <div class="state-strip" aria-live="polite">
+          <span id="state-day">weekday</span>
+          <span id="state-period">morning peak</span>
+          <span id="state-corridor">Brooklyn -> Manhattan</span>
+        </div>
+      </header>
+
+      <section class="phase-pane" aria-label="Temporal phase query rail">
+        <div class="pane-title">
+          <span>phase query rail</span>
+          <span class="hint">click a period band or day row</span>
+        </div>
+        <svg id="phase-rail" viewBox="0 0 1120 132" role="img" aria-label="24 hour weekday and weekend trip rhythm"></svg>
+      </section>
+
+      <main class="workspace">
+        <section class="braid-pane" aria-label="City pulse braid">
+          <div class="pane-title">
+            <span>city pulse braid</span>
+            <span class="hint">select a tapered corridor or anomaly spark</span>
+          </div>
+          <svg id="pulse-braid" viewBox="0 0 1000 650" role="img" aria-label="Directed taxi origin destination pulse braid"></svg>
+          <div id="tooltip" class="tooltip" hidden></div>
+        </section>
+
+        <aside class="evidence-pane" aria-label="Selected evidence">
+          <section class="regime-section">
+            <div class="pane-title">
+              <span>selected-regime evidence</span>
+              <span class="hint">role chips highlight matching strands</span>
+            </div>
+            <div id="role-chips" class="role-chips"></div>
+            <svg id="regime-evidence" viewBox="0 0 460 220" role="img" aria-label="Selected corridor evidence strip"></svg>
+            <div id="zone-evidence" class="zone-evidence"></div>
+          </section>
+
+          <section class="trace-section">
+            <div class="pane-title">
+              <span>aggregate-to-record trace</span>
+              <span class="hint">real rows, capped for inspection</span>
+            </div>
+            <div id="trace-boundary" class="trace-boundary"></div>
+            <div id="anomaly-classes" class="anomaly-classes"></div>
+            <div id="record-trace" class="record-trace"></div>
+          </section>
+        </aside>
+      </main>
+
+      <footer id="data-provenance" class="data-provenance"></footer>
+    </div>
+    <script src="./data/pulse_payload.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

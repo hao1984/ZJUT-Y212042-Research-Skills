@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paper-Grounded VIS Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <div class="titleBlock">
+        <div class="kicker" id="domainLabel">Paper-grounded VIS</div>
+        <h1 id="appTitle">Loading...</h1>
+      </div>
+      <div class="question" id="primaryQuestion"></div>
+      <div class="controls" id="routeControls" aria-label="Analysis routes"></div>
+    </header>
+
+    <main class="workspace">
+      <section class="panel primaryPanel" data-view-slot="primary">
+        <div class="panelHead">
+          <div>
+            <span class="eyebrow" id="primaryEyebrow">Primary object</span>
+            <h2 id="primaryTitle">Primary View</h2>
+          </div>
+          <button id="clearBtn" class="iconTextButton" type="button">Clear</button>
+        </div>
+        <div class="primaryObject" id="primaryObject"></div>
+      </section>
+
+      <section class="panel companionTop" data-view-slot="reference">
+        <div class="panelHead compactHead">
+          <div>
+            <span class="eyebrow">Reference patterns</span>
+            <h2 id="referenceTitle">Paper Grounding</h2>
+          </div>
+        </div>
+        <div class="referenceList" id="referenceList"></div>
+      </section>
+
+      <section class="panel companionBottom" data-view-slot="route">
+        <div class="panelHead compactHead">
+          <div>
+            <span class="eyebrow" id="stripEyebrow">Companion view</span>
+            <h2 id="stripTitle">Keyword and State Rail</h2>
+          </div>
+        </div>
+        <div class="stripView" id="stripView"></div>
+      </section>
+
+      <section class="panel evidencePanel" data-view-slot="evidence">
+        <div class="panelHead compactHead">
+          <div>
+            <span class="eyebrow">Evidence detail</span>
+            <h2>Selection Evidence</h2>
+          </div>
+        </div>
+        <div class="evidenceBody" id="evidenceBody"></div>
+      </section>
+    </main>
+
+    <footer class="provenance" id="provenanceBar"></footer>
+  </div>
+  <script src="data/payload.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
